@@ -7,12 +7,33 @@
     <!-- menu-button -->
 
     <div class="menu_button_container d-flex justify-content-between">
-      <a href="/home"> Home</a>
+      <a href="#"> Home</a>
       <a href=""> About</a>
       <a href=""> Education</a>
       <a href=""> Skills</a>
       <a href=""> Contact</a>
     </div>
+
+    <a *ngIf="sidebarOpen" class="close-btn" (click)="closeToggle()"
+      ><i class="fa-solid fa-xmark"></i
+    ></a>
+
+    <i
+      class="fa-solid fa-bars"
+      (click)="toggleSidebar()"
+      *ngIf="!sidebarOpen"
+    ></i>
+  </div>
+
+  <!-- side bar -->
+  <div class="sidebar" [class.open]="sidebarOpen">
+    <ul >
+      <li><a href="">closeToggle</a></li>
+      <li><a href="">Education</a></li>
+      <li><a href="">Skills</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">About</a></li>
+    </ul>
   </div>
 
   <!-- body -->

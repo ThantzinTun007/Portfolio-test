@@ -2,10 +2,13 @@
   width: 100%;
   height: 100vh;
   background: #091b29;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .navbar_container {
-  width: 80%;
+  width: 87%;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -24,7 +27,7 @@
   width: 40%;
 }
 
-.navbar_container a {
+.menu_button_container a {
   font-size: 16px;
   text-decoration: none;
   color: rgb(188, 189, 190);
@@ -32,13 +35,82 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar_container a:hover {
+.menu_button_container a:hover {
   color: #388dad;
   cursor: pointer;
 }
 
+.navbar_container i {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: rgb(188, 189, 190);
+  display: none;
+  cursor: pointer;
+}
+
+.navbar_container i:hover {
+  color: #07a0e3;
+}
+
+.close-btn {
+  font-size: 25px;
+  color: rgb(188, 189, 190);
+  text-decoration: none;
+}
+
+.close-btn:hover {
+  color: #07a0e3;
+}
+
+.sidebar {
+  width: 350px;
+  height: calc(100% - 60px);
+  position: fixed;
+  top: 80px;
+  right: -350px;
+  background-color: #0d3859;
+  box-shadow: -2px 0 5px rgba(36, 36, 36, 0.106);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  z-index: 2;
+  transform: translateX(0);
+  transition: right 0.3s ease;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar ul {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar ul li {
+  width: 100%;
+  height: 50px;
+  background-color: #091b29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sidebar ul li a {
+  color: rgb(116, 115, 115);
+  text-decoration: none;
+}
+
 .body_container {
-  width: 80%;
+  width: 87%;
   display: flex;
   margin: 0 auto;
 }
@@ -126,4 +198,14 @@
   color: #04a3e8;
   font-size: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 1270px) {
+  .navbar_container i {
+    display: block;
+  }
+
+  .menu_button_container a {
+    display: none;
+  }
 }
