@@ -1,43 +1,42 @@
+<div class="navbar_container">
+  <!-- logo -->
+  <div class="logo_text">TZTun.</div>
+
+  <!-- menu-button -->
+
+  <div class="menu_button_container d-flex justify-content-between">
+    <a (click)="scrollToHome()"> Home</a>
+    <a (click)="scrollToAboutme()"> About</a>
+    <a (click)="scrollToEducation()"> Education</a>
+    <a href=""> Skills</a>
+    <a href=""> Contact</a>
+  </div>
+
+  <a *ngIf="sidebarOpen" class="close-btn" (click)="closeToggle()"
+    ><i class="fa-solid fa-xmark"></i
+  ></a>
+
+  <i
+    class="fa-solid fa-bars"
+    (click)="toggleSidebar()"
+    *ngIf="!sidebarOpen"
+  ></i>
+</div>
+
+<!-- side bar -->
+<div class="sidebar" [class.open]="sidebarOpen">
+  <ul>
+    <li><a href="">closeToggle</a></li>
+    <li><a href="">Education</a></li>
+    <li><a href="">Skills</a></li>
+    <li><a href="">Contact</a></li>
+    <li><a href="">About</a></li>
+  </ul>
+</div>
+
 <div class="main_container">
-  <!-- navbar -->
-  <div class="navbar_container">
-    <!-- logo -->
-    <div class="logo_text">TZTun.</div>
-
-    <!-- menu-button -->
-
-    <div class="menu_button_container d-flex justify-content-between">
-      <a href="#"> Home</a>
-      <a href="javascript:void(0)" (click)="scrollToSection()"> About</a>
-      <a href=""> Education</a>
-      <a href=""> Skills</a>
-      <a href=""> Contact</a>
-    </div>
-
-    <a *ngIf="sidebarOpen" class="close-btn" (click)="closeToggle()"
-      ><i class="fa-solid fa-xmark"></i
-    ></a>
-
-    <i
-      class="fa-solid fa-bars"
-      (click)="toggleSidebar()"
-      *ngIf="!sidebarOpen"
-    ></i>
-  </div>
-
-  <!-- side bar -->
-  <div class="sidebar" [class.open]="sidebarOpen">
-    <ul >
-      <li><a href="">closeToggle</a></li>
-      <li><a href="">Education</a></li>
-      <li><a href="">Skills</a></li>
-      <li><a href="">Contact</a></li>
-      <li><a href="">About</a></li>
-    </ul>
-  </div>
-
   <!-- body -->
-  <div class="body_container">
+  <div class="body_container" #homeSection>
     <!-- left text -->
     <div class="text_container">
       <h1>Hi,I'm Thant Zin</h1>
@@ -65,9 +64,13 @@
     </div>
   </div>
 
-
   <!-- about me -->
-  <div id="about-me" #aboutMeSection>
+  <div #aboutMeSection>
     <app-about-me></app-about-me>
+  </div>
+
+  <!-- education -->
+  <div #educationSection>
+    <app-education></app-education>
   </div>
 </div>

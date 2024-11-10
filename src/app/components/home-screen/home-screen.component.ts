@@ -10,8 +10,20 @@ export class HomeScreenComponent {
 
   @ViewChild('aboutMeSection', { static: false }) aboutMeSection!: ElementRef;
 
-  scrollToSection() {
+  scrollToAboutme() {
     this.aboutMeSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  @ViewChild('homeSection', { static: false }) homeSection!: ElementRef;
+
+  scrollToHome() {
+    this.homeSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  @ViewChild('educationSection', { static: false }) educationSection!: ElementRef;
+
+  scrollToEducation() {
+    this.educationSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
   toggleSidebar(): void {
