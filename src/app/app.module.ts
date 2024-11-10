@@ -10,9 +10,10 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeScreenComponent } from './components/home-screen/home-screen.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeScreenComponent, ContactUsComponent],
+  declarations: [AppComponent, HomeScreenComponent, ContactUsComponent, AboutMeComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, RouterModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

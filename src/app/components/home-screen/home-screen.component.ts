@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home-screen',
@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomeScreenComponent {
   sidebarOpen: boolean = false;
+
+  @ViewChild('aboutMeSection', { static: false }) aboutMeSection!: ElementRef;
+
+  scrollToSection() {
+    this.aboutMeSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
 
   toggleSidebar(): void {
     this.sidebarOpen = !this.sidebarOpen;

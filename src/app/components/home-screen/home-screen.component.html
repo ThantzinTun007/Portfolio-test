@@ -8,7 +8,7 @@
 
     <div class="menu_button_container d-flex justify-content-between">
       <a href="#"> Home</a>
-      <a href=""> About</a>
+      <a href="javascript:void(0)" (click)="scrollToSection()"> About</a>
       <a href=""> Education</a>
       <a href=""> Skills</a>
       <a href=""> Contact</a>
@@ -63,5 +63,11 @@
     <div class="image_container">
       <img src="/assets/images/man.png" alt="image" class="logo" />
     </div>
+  </div>
+
+
+  <!-- about me -->
+  <div id="about-me" #aboutMeSection>
+    <app-about-me></app-about-me>
   </div>
 </div>
