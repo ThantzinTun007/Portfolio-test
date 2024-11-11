@@ -12,9 +12,10 @@ import { HomeScreenComponent } from './components/home-screen/home-screen.compon
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { EducationComponent } from './components/education/education.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeScreenComponent, ContactUsComponent, AboutMeComponent, EducationComponent],
+  declarations: [AppComponent, HomeScreenComponent, ContactUsComponent, AboutMeComponent, EducationComponent, SkillsComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, RouterModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
