@@ -1,27 +1,27 @@
 <div class="skills-container">
-    <h2>My <span class="highlight">Skills</span></h2>
-    
-    <div class="box-container">
-        <div class="box-text-container">
-            <h4>Coding Skills</h4>
-            <div *ngFor="let skill of codingSkills" class="box-style">
-                <label>{{ skill.name }}</label>
-                <div class="progress-bar">
-                    <div class="progress-fill" [style.width]="skill.level + '%'"></div>
-                </div>
-                <span>{{ skill.level }}%</span>
-            </div>
+  <h2>My <span class="highlight">Skills</span></h2>
+
+  <div class="box-container">
+    <div class="box-text-container">
+      <h4>Coding Skills</h4>
+      <div *ngFor="let skill of codingSkills" class="box-style">
+        <label>{{ skill.name }}</label>
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width]="skill.level + '%'"></div>
         </div>
-        
-        <div class="box-text-container">
-            <h4>Professional Skills</h4>
-            <div *ngFor="let skill of professionalSkills" class="box-style">
-                <label>{{ skill.name }}</label>
-                <div class="progress-bar">
-                    <div class="progress-fill" [style.width]="skill.level + '%'"></div>
-                </div>
-                <span>{{ skill.level }}%</span>
-            </div>
-        </div>
+        <span>{{ skill.level }}%</span>
+      </div>
     </div>
+
+    <div class="box-text-container">
+      <h4>Professional Skills</h4>
+      <div *ngFor="let skill of professionalSkills" class="box-style">
+        <label>{{ skill.name }}</label>
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width]="skill.level + '%'"></div>
+        </div>
+        <span>{{ skill.level }}%</span>
+      </div>
+    </div>
+  </div>
 </div>
