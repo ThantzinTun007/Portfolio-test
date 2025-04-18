@@ -1,0 +1,108 @@
+.main-box-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#193649, #091b29);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sec-conatainer {
+  width: 500px;
+}
+
+ul {
+  position: relative;
+  transform: skewY(-15deg);
+}
+
+li {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  padding: 15px;
+  background-color: #3e3f46;
+  z-index: calc(1 * var(--i));
+  transition: 0.5s;
+}
+
+li:hover {
+  background: #0f2636;
+  transform: translateX(-50px);
+}
+
+li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #2e3133;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+
+.icon-home::before {
+  content: "\f015";
+}
+.icon-user::before {
+  content: "\f2bb";
+}
+.icon-music::before {
+  content: "\f03a";
+}
+.icon-folder::before {
+  content: "\f07c"; /* fa-folder */
+}
+.icon-people::before {
+  content: "\e533"; /* fa-people-group */
+}
+.icon-mail::before {
+  content: "\40"; /* @ symbol, fallback */
+}
+
+li:hover::before {
+  background-color: #0f2636;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  background: #35383e;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+
+li:hover::after {
+  background: #0f2636;
+}
+
+li a {
+  text-decoration: none;
+  color: #999;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+li:hover a {
+  color: #fff;
+}
+
+li:last-child::after {
+  box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
+}
