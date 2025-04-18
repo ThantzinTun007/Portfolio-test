@@ -1,6 +1,6 @@
 .main_container {
   width: 100%;
-  height: 100vh;
+
   margin-top: 80px;
   background: #091b29;
 }
@@ -39,7 +39,7 @@
 }
 
 .menu_button_container a:hover {
-  color: #388dad;
+  color: #04a3e8;
   cursor: pointer;
 }
 
