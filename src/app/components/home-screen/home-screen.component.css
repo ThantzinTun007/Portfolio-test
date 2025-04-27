@@ -1,6 +1,6 @@
 .main_container {
   width: 100%;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   background: #091b29;
 }
 
@@ -13,9 +13,9 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  z-index: 20;
+  z-index: 20; */
 }
 
 .navbar_container .logo_text {
@@ -171,8 +171,6 @@
   font-weight: 500;
   font-size: 15px;
 }
-
-
 
 .text_container .btn1:hover {
   background-color: transparent;
