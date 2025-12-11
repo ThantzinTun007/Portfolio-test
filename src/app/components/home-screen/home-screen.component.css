@@ -25,6 +25,12 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
+.logo-container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .navbar_container .menu_button_container {
   width: 40%;
 }
@@ -170,6 +176,7 @@
   color: black;
   font-weight: 500;
   font-size: 15px;
+  transition:0.5s ease-in-out;
 }
 
 .text_container .btn1:hover {
@@ -230,5 +237,39 @@
 
   .menu_button_container a {
     display: none;
+  }
+}
+
+
+.spin {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid rgba(86, 199, 207, 0.211);
+  /* box-shadow: 0px 0px 9px rgb(86, 199, 207); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: #091b29;
+  border-radius: 50px;
+  /* animation-name: spin;
+  animation-duration: 3s; */
+  margin: 0 auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 2px 2px rgb(86, 199, 207);
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 2px 2px rgb(64, 131, 195);
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 2px 2px rgb(153, 72, 200);
   }
 }
